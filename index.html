@@ -13,6 +13,14 @@
                     $("div.images").fadeIn("slow");
                 });
             });
+
+            $("h1").click(function(){
+                if ($("div.images").is(":visible")) {
+                    $("div.images").fadeOut("slow", function(){
+                        $("div.intro").fadeIn("slow");
+                    });
+                }
+            });
         });
     </script>
 </head>
