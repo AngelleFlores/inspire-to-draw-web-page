@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
+            let counter = 5;
+
             $("#start-button").click(function(){
                 $("div.intro").fadeOut("slow", function(){
                     $("div.images").fadeIn("slow");
@@ -20,6 +22,15 @@
                         $("div.intro").fadeIn("slow");
                     });
                 }
+            });
+
+            $("#redo-button").click(function(){
+                $("html").scrollTop(0);
+                $("div.images img").css("visibility", "hidden");
+                $("div.images img").each(function(){
+                    $(this).attr("src", "https://picsum.photos/450?random=" + counter++);
+                });
+                $("div.images img").css("visibility", "visible");
             });
         });
     </script>
