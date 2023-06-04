@@ -1,0 +1,34 @@
+* {
+    font-family: "Rouge Script", cursive;
+}
+
+body {
+    background-color: #D2D2D2;
+    color: #204B64;
+    margin: auto;
+    width: 80.5%;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 60%;
+}
+
+h1 {
+    font-size: 6.5rem;
+    font-weight: normal;
+    margin: 55px 0 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #204B64;
+}
+
+.intro p {
+    font-size: 6rem;
+    margin-top: 230px;
+    margin-bottom: 50px;
+}
+
+#start-button {
+    font-size: 4rem;
+}
