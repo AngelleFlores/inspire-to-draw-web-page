@@ -10,9 +10,21 @@ body {
     text-align: center;
 }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 60%;
+button {
+    font-size: 4rem;
+    background-color: #204B64;
+    color: #FFFFFF;
+    padding: 18px 37px;
+    border-radius: 20px;
+    border: none;
+}
+
+button:hover {
+    background-color: #30759C;
+}
+
+button, h1 {
+    cursor: pointer;
 }
 
 h1 {
@@ -23,12 +35,13 @@ h1 {
     border-bottom: 1px solid #204B64;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-size: 60%;
+}
+
 .intro p {
     font-size: 6rem;
     margin-top: 230px;
     margin-bottom: 50px;
-}
-
-#start-button {
-    font-size: 4rem;
 }
