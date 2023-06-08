@@ -16,6 +16,10 @@
 
             $("#start-button").click(function(){
                 $("div.intro").fadeOut("slow", function(){
+                    $("#cover").addClass("cover");
+                    $("div.images").addClass("grid");
+                    $("div.images").hide();
+                    $("#cover").removeClass("cover");
                     $("div.images").fadeIn("slow");
                 });
             });
@@ -32,7 +36,11 @@
                 $("html").scrollTop(0);
                 $("div.images img").css("visibility", "hidden");
                 $("div.images img").each(function(){
-                    $(this).attr("src", "https://picsum.photos/450?random=" + counter++);
+                    if ($(this).attr("height") == 400) {
+                        $(this).attr("src", "https://picsum.photos/300/400?random=" + counter++);
+                    } else {
+                        $(this).attr("src", "https://picsum.photos/400/300?random=" + counter++);
+                    }
                 });
                 $("div.images img").css("visibility", "visible");
             });
@@ -47,17 +55,24 @@
         <button type="button" id="start-button">Find Inspiration</button>
     </div>
 
+    <div id="cover"></div>
+
     <div class="images" hidden>
         <div class="div-1">
-            <img src="https://picsum.photos/450?random=1" alt="Random Picture 1" width="450" height="450">
-            <img src="https://picsum.photos/450?random=2" alt="Random Picture 2" width="450" height="450">
+            <img id="pic1" src="https://picsum.photos/300/400?random=1" alt="Random Picture 1"
+                height="400" width="300">
+            <img id="pic2" src="https://picsum.photos/400/300?random=2" alt="Random Picture 2"
+                height="300" width="400">
         </div>
         <div class="div-2">
-            <img src="https://picsum.photos/450?random=3" alt="Random Picture 3" width="450" height="450">
-            <img src="https://picsum.photos/450?random=4" alt="Random Picture 4" width="450" height="450">
+            <img id="pic3" src="https://picsum.photos/300/400?random=3" alt="Random Picture 3"
+                height="400" width="300">
+            <img id="pic4" src="https://picsum.photos/300/400?random=4" alt="Random Picture 4"
+                height="400" width="300">
         </div>
         <div class="div-3">
-            <img src="https://picsum.photos/450?random=5" alt="Random Picture 5" width="450" height="450">
+            <img id="pic5" src="https://picsum.photos/400/300?random=5" alt="Random Picture 5"
+                height="300" width="400">
             <button type="button" id="redo-button">New Inspiration</button>
         </div>
     </div>
